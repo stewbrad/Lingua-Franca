@@ -1,35 +1,20 @@
-Last login: Thu Jun 30 02:47:14 on ttys000
-(base) bradsteww@MacBook-Air-4 ~ % pwd              
-/Users/bradsteww
-% cd bradsteww
-cd: no such file or directory: bradsteww
-(base) bradsteww@MacBook-Air-4 ~ % cd bradsteww/
-cd: no such file or directory: bradsteww/
-(base) bradsteww@MacBook-Air-4 ~ % ls           
-Applications			Music
-Applications (Parallels)	Parallels
-Desktop				Pictures
-Documents			Public
-Downloads			Sites
-Library				thinkorswim
-Movies
-(base) bradsteww@MacBook-Air-4 ~ % cd /Users/bradsteww/Downloads/lingua-franca-project/
-(base) bradsteww@MacBook-Air-4 lingua-franca-project % pwd
+% cd /Users/bradsteww/Downloads/lingua-franca-project/
+% pwd
 /Users/bradsteww/Downloads/lingua-franca-project
-(base) bradsteww@MacBook-Air-4 lingua-franca-project % ls
+% ls
 lingua-franca	solution.html	tasks.html
-(base) bradsteww@MacBook-Air-4 lingua-franca-project % mkdir world
-(base) bradsteww@MacBook-Air-4 lingua-franca-project % cd world
-(base) bradsteww@MacBook-Air-4 world % touch esperanto.txt
-(base) bradsteww@MacBook-Air-4 world % ls   
+% mkdir world
+% cd world
+% touch esperanto.txt
+% ls   
 esperanto.txt
-(base) bradsteww@MacBook-Air-4 world % ls -alt
+% ls -alt
 total 0
 drwxr-xr-x  3 bradsteww  staff   96 Jul  1 09:32 .
 -rw-r--r--  1 bradsteww  staff    0 Jul  1 09:32 esperanto.txt
 drwx------@ 7 bradsteww  staff  224 Jul  1 09:32 ..
-(base) bradsteww@MacBook-Air-4 world % cd ../lingua-franca
-(base) bradsteww@MacBook-Air-4 lingua-franca % ls -alt
+% cd ../lingua-franca
+% ls -alt
 total 0
 drwx------@ 7 bradsteww  staff  224 Jul  1 09:32 ..
 drwxrwxr-x@ 9 bradsteww  staff  288 Oct  5  2020 .
@@ -40,17 +25,17 @@ drwxrwxr-x@ 4 bradsteww  staff  128 Oct  5  2020 northamerica
 drwxrwxr-x@ 3 bradsteww  staff   96 Oct  5  2020 southamerica
 drwxrwxr-x@ 5 bradsteww  staff  160 Oct  5  2020 todo
 -rw-rw-r--@ 1 bradsteww  staff    0 Sep 22  2020 spanish.txt
-(base) bradsteww@MacBook-Air-4 lingua-franca % ls europe
+% ls europe
 chinese.txt	french.txt	italian.txt	russian.txt
 english.txt	german.txt	portuguese.txt
-(base) bradsteww@MacBook-Air-4 lingua-franca % mv europe/chinese.txt asia/
-(base) bradsteww@MacBook-Air-4 lingua-franca % ls 
+% mv europe/chinese.txt asia/
+% ls 
 africa		europe		southamerica	todo
 asia		northamerica	spanish.txt
-(base) bradsteww@MacBook-Air-4 lingua-franca % cp spanish.txt europe
-(base) bradsteww@MacBook-Air-4 lingua-franca % cp spanish.txt northamerica
-(base) bradsteww@MacBook-Air-4 lingua-franca % cp spanish.txt southamerica
-(base) bradsteww@MacBook-Air-4 lingua-franca % ls todo/*
+% cp spanish.txt europe
+% cp spanish.txt northamerica
+% cp spanish.txt southamerica
+% ls todo/*
 todo/africa:
 afrihili.txt
 
@@ -59,18 +44,18 @@ bengali.txt	punjabi.txt
 
 todo/europe:
 yiddish.txt
-(base) bradsteww@MacBook-Air-4 lingua-franca % cp todo/africa/* africa
-(base) bradsteww@MacBook-Air-4 lingua-franca % cp todo/africa/* europe
-(base) bradsteww@MacBook-Air-4 lingua-franca % cp todo/africa/* asia  
-(base) bradsteww@MacBook-Air-4 lingua-franca % rm -r todo/*
+% cp todo/africa/* africa
+% cp todo/africa/* europe
+% cp todo/africa/* asia  
+% rm -r todo/*
 zsh: sure you want to delete all 3 files in /Users/bradsteww/Downloads/lingua-franca-project/lingua-franca/todo [yn]? y
-(base) bradsteww@MacBook-Air-4 lingua-franca % ls asia/* > todo/asian_language_files.txt
-(base) bradsteww@MacBook-Air-4 lingua-franca % echo "Welkom by die Lingua Franca vertaaldienste." > africa/afrikaans.txt
-(base) bradsteww@MacBook-Air-4 lingua-franca % wc -1 */*.txt | grep 0 > todo/empty_files.txt
+% ls asia/* > todo/asian_language_files.txt
+% echo "Welkom by die Lingua Franca vertaaldienste." > africa/afrikaans.txt
+% wc -1 */*.txt | grep 0 > todo/empty_files.txt
 wc: illegal option -- 1
 usage: wc [-clmw] [file ...]
-(base) bradsteww@MacBook-Air-4 lingua-franca % wc -l */*.txt | grep 0 > todo/empty_files.txt
-(base) bradsteww@MacBook-Air-4 lingua-franca % cat todo/empty_files.txt
+% wc -l */*.txt | grep 0 > todo/empty_files.txt
+% cat todo/empty_files.txt
        0 africa/afrihili.txt
        0 asia/afrihili.txt
        0 asia/chinese.txt
@@ -88,36 +73,28 @@ usage: wc [-clmw] [file ...]
        0 southamerica/spanish.txt
        0 todo/empty_files.txt
       20 total
-(base) bradsteww@MacBook-Air-4 lingua-franca % grep -R1 'Lingua-Franca' */*.txt | wc -l
+% grep -R1 'Lingua-Franca' */*.txt | wc -l
       12
-(base) bradsteww@MacBook-Air-4 lingua-franca % sed -i 's/Lingua-Franca/Lingua Franca/g' */*.txt
-sed: 1: "africa/afrihili.txt": command a expects \ followed by text
-(base) bradsteww@MacBook-Air-4 lingua-franca % grep -R1 "Lingua-Franca' */*.txt |wc -l
-dquote> cat todo/empty_files.txt                        
-(base) bradsteww@MacBook-Air-4 lingua-franca % grep -R1 "Lingua-Franca' */*.txt | wc -l
-dquote> 
-(base) bradsteww@MacBook-Air-4 lingua-franca % sed -i.bak 's/Lingua-Franca/Lingua Franca/g' */*.txt
-(base) bradsteww@MacBook-Air-4 lingua-franca % grep -R1 "Lingua-Franca' */*.txt | wc -l
-dquote> 
-(base) bradsteww@MacBook-Air-4 lingua-franca % grep -R1 'Lingua-Franca' */*.txt | wc -l
+% sed -i.bak 's/Lingua-Franca/Lingua Franca/g' */*.txt
+% grep -R1 'Lingua-Franca' */*.txt | wc -l
        0
-(base) bradsteww@MacBook-Air-4 lingua-franca % nano ~/.bash_profile
-(base) bradsteww@MacBook-Air-4 lingua-franca % nano ~/.bash_profile
-(base) bradsteww@MacBook-Air-4 lingua-franca % source ~/.bash_profile
+% nano ~/.bash_profile
+% nano ~/.bash_profile
+% source ~/.bash_profile
 Dia dhuit! Welcome to Lingua Franca
-(base) bradsteww@MacBook-Air-4 lingua-franca % nano ~/.bash_profile  
-(base) bradsteww@MacBook-Air-4 lingua-franca % source ~/.bash_profile
+% nano ~/.bash_profile  
+% source ~/.bash_profile
 Dia dhuit! Welcome to Lingua Franca
-(base) bradsteww@MacBook-Air-4 lingua-franca % pwd      
+% pwd      
 /Users/bradsteww/Downloads/lingua-franca-project/lingua-franca
-(base) bradsteww@MacBook-Air-4 lingua-franca % md dead-languages
-(base) bradsteww@MacBook-Air-4 lingua-franca % ls        
+% md dead-languages
+% ls        
 africa		dead-languages	northamerica	spanish.txt
 asia		europe		southamerica	todo
-(base) bradsteww@MacBook-Air-4 lingua-franca % ls dead-languages
-(base) bradsteww@MacBook-Air-4 lingua-franca % d
+% ls dead-languages
+% d
 Fri Jul  1 10:07:27 PDT 2022
-(base) bradsteww@MacBook-Air-4 lingua-franca % hy
+% hy
    35  sed -i 's/Lingua-Franca/Lingua Franca/g' */*.txt
    36  grep -R1 "Lingua-Franca' */*.txt |wc -l
    37  grep -R1 "Lingua-Franca' */*.txt | wc -l
@@ -134,18 +111,17 @@ Fri Jul  1 10:07:27 PDT 2022
    48  ls
    49  ls dead-languages
    50  d
-(base) bradsteww@MacBook-Air-4 lingua-franca % nano ~/.bash_profile  
-(base) bradsteww@MacBook-Air-4 lingua-franca % source ~/.bash_profile
+% nano ~/.bash_profile  
+% source ~/.bash_profile
 Dia dhuit! Welcome to Lingua Franca
-(base) Lingua Franca nano ~/.bash_profile 
-(base) Lingua Franca source ~/.bash_profile
+Lingua Franca nano ~/.bash_profile 
+Lingua Franca source ~/.bash_profile
 Dia dhuit! Welcome to Lingua Franca
-(base) Lingua Franca md script
-(base) Lingua Franca ls
+Lingua Franca ls
 africa		dead-languages	northamerica	southamerica	todo
 asia		europe		script		spanish.txt
-(base) Lingua Franca ls script
-(base) Lingua Franca d
+Lingua Franca ls script
+Lingua Franca d
 Fri Jul  1 10:10:11 PDT 2022
 (base) Lingua Franca hy
    44  nano ~/.bash_profile
@@ -164,14 +140,10 @@ Fri Jul  1 10:10:11 PDT 2022
    57  ls
    58  ls script
    59  d
-(base) Lingua Franca md asia
-mkdir: asia: File exists
-(base) Lingua Franca md dead-languages
+Lingua Franca md dead-languages
 mkdir: dead-languages: File exists
-(base) Lingua Franca ls dead_languages
-ls: dead_languages: No such file or directory
-(base) Lingua Franca ls dead-languages
-(base) Lingua Franca d
+Lingua Franca ls dead-languages
+Lingua Franca d
 Fri Jul  1 10:11:31 PDT 2022
 (base) Lingua Franca hy
    50  d
@@ -190,7 +162,7 @@ Fri Jul  1 10:11:31 PDT 2022
    63  ls dead_languages
    64  ls dead-languages
    65  d
-(base) Lingua Franca env
+Lingua Franca env
 TMPDIR=/var/folders/hs/y001nx_151l9gx8vr19gt3240000gn/T/
 __CFBundleIdentifier=com.apple.Terminal
 XPC_FLAGS=0x0

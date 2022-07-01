@@ -1,0 +1,225 @@
+Last login: Thu Jun 30 02:47:14 on ttys000
+(base) bradsteww@MacBook-Air-4 ~ % pwd              
+/Users/bradsteww
+(base) bradsteww@MacBook-Air-4 ~ % cd bradsteww
+cd: no such file or directory: bradsteww
+(base) bradsteww@MacBook-Air-4 ~ % cd bradsteww/
+cd: no such file or directory: bradsteww/
+(base) bradsteww@MacBook-Air-4 ~ % ls           
+Applications			Music
+Applications (Parallels)	Parallels
+Desktop				Pictures
+Documents			Public
+Downloads			Sites
+Library				thinkorswim
+Movies
+(base) bradsteww@MacBook-Air-4 ~ % cd /Users/bradsteww/Downloads/lingua-franca-project/
+(base) bradsteww@MacBook-Air-4 lingua-franca-project % pwd
+/Users/bradsteww/Downloads/lingua-franca-project
+(base) bradsteww@MacBook-Air-4 lingua-franca-project % ls
+lingua-franca	solution.html	tasks.html
+(base) bradsteww@MacBook-Air-4 lingua-franca-project % mkdir world
+(base) bradsteww@MacBook-Air-4 lingua-franca-project % cd world
+(base) bradsteww@MacBook-Air-4 world % touch esperanto.txt
+(base) bradsteww@MacBook-Air-4 world % ls   
+esperanto.txt
+(base) bradsteww@MacBook-Air-4 world % ls -alt
+total 0
+drwxr-xr-x  3 bradsteww  staff   96 Jul  1 09:32 .
+-rw-r--r--  1 bradsteww  staff    0 Jul  1 09:32 esperanto.txt
+drwx------@ 7 bradsteww  staff  224 Jul  1 09:32 ..
+(base) bradsteww@MacBook-Air-4 world % cd ../lingua-franca
+(base) bradsteww@MacBook-Air-4 lingua-franca % ls -alt
+total 0
+drwx------@ 7 bradsteww  staff  224 Jul  1 09:32 ..
+drwxrwxr-x@ 9 bradsteww  staff  288 Oct  5  2020 .
+drwxrwxr-x@ 3 bradsteww  staff   96 Oct  5  2020 africa
+drwxrwxr-x@ 8 bradsteww  staff  256 Oct  5  2020 asia
+drwxrwxr-x@ 9 bradsteww  staff  288 Oct  5  2020 europe
+drwxrwxr-x@ 4 bradsteww  staff  128 Oct  5  2020 northamerica
+drwxrwxr-x@ 3 bradsteww  staff   96 Oct  5  2020 southamerica
+drwxrwxr-x@ 5 bradsteww  staff  160 Oct  5  2020 todo
+-rw-rw-r--@ 1 bradsteww  staff    0 Sep 22  2020 spanish.txt
+(base) bradsteww@MacBook-Air-4 lingua-franca % ls europe
+chinese.txt	french.txt	italian.txt	russian.txt
+english.txt	german.txt	portuguese.txt
+(base) bradsteww@MacBook-Air-4 lingua-franca % mv europe/chinese.txt asia/
+(base) bradsteww@MacBook-Air-4 lingua-franca % ls 
+africa		europe		southamerica	todo
+asia		northamerica	spanish.txt
+(base) bradsteww@MacBook-Air-4 lingua-franca % cp spanish.txt europe
+(base) bradsteww@MacBook-Air-4 lingua-franca % cp spanish.txt northamerica
+(base) bradsteww@MacBook-Air-4 lingua-franca % cp spanish.txt southamerica
+(base) bradsteww@MacBook-Air-4 lingua-franca % ls todo/*
+todo/africa:
+afrihili.txt
+
+todo/asia:
+bengali.txt	punjabi.txt
+
+todo/europe:
+yiddish.txt
+(base) bradsteww@MacBook-Air-4 lingua-franca % cp todo/africa/* africa
+(base) bradsteww@MacBook-Air-4 lingua-franca % cp todo/africa/* europe
+(base) bradsteww@MacBook-Air-4 lingua-franca % cp todo/africa/* asia  
+(base) bradsteww@MacBook-Air-4 lingua-franca % rm -r todo/*
+zsh: sure you want to delete all 3 files in /Users/bradsteww/Downloads/lingua-franca-project/lingua-franca/todo [yn]? y
+(base) bradsteww@MacBook-Air-4 lingua-franca % ls asia/* > todo/asian_language_files.txt
+(base) bradsteww@MacBook-Air-4 lingua-franca % echo "Welkom by die Lingua Franca vertaaldienste." > africa/afrikaans.txt
+(base) bradsteww@MacBook-Air-4 lingua-franca % wc -1 */*.txt | grep 0 > todo/empty_files.txt
+wc: illegal option -- 1
+usage: wc [-clmw] [file ...]
+(base) bradsteww@MacBook-Air-4 lingua-franca % wc -l */*.txt | grep 0 > todo/empty_files.txt
+(base) bradsteww@MacBook-Air-4 lingua-franca % cat todo/empty_files.txt
+       0 africa/afrihili.txt
+       0 asia/afrihili.txt
+       0 asia/chinese.txt
+       0 asia/hebrew.txt
+       0 asia/hindi.txt
+       0 asia/japanese.txt
+       0 europe/afrihili.txt
+       0 europe/french.txt
+       0 europe/german.txt
+       0 europe/italian.txt
+       0 europe/russian.txt
+       0 europe/spanish.txt
+       0 northamerica/french.txt
+       0 northamerica/spanish.txt
+       0 southamerica/spanish.txt
+       0 todo/empty_files.txt
+      20 total
+(base) bradsteww@MacBook-Air-4 lingua-franca % grep -R1 'Lingua-Franca' */*.txt | wc -l
+      12
+(base) bradsteww@MacBook-Air-4 lingua-franca % sed -i 's/Lingua-Franca/Lingua Franca/g' */*.txt
+sed: 1: "africa/afrihili.txt": command a expects \ followed by text
+(base) bradsteww@MacBook-Air-4 lingua-franca % grep -R1 "Lingua-Franca' */*.txt |wc -l
+dquote> cat todo/empty_files.txt                        
+(base) bradsteww@MacBook-Air-4 lingua-franca % grep -R1 "Lingua-Franca' */*.txt | wc -l
+dquote> 
+(base) bradsteww@MacBook-Air-4 lingua-franca % sed -i.bak 's/Lingua-Franca/Lingua Franca/g' */*.txt
+(base) bradsteww@MacBook-Air-4 lingua-franca % grep -R1 "Lingua-Franca' */*.txt | wc -l
+dquote> 
+(base) bradsteww@MacBook-Air-4 lingua-franca % grep -R1 'Lingua-Franca' */*.txt | wc -l
+       0
+(base) bradsteww@MacBook-Air-4 lingua-franca % nano ~/.bash_profile
+(base) bradsteww@MacBook-Air-4 lingua-franca % nano ~/.bash_profile
+(base) bradsteww@MacBook-Air-4 lingua-franca % source ~/.bash_profile
+Dia dhuit! Welcome to Lingua Franca
+(base) bradsteww@MacBook-Air-4 lingua-franca % nano ~/.bash_profile  
+(base) bradsteww@MacBook-Air-4 lingua-franca % source ~/.bash_profile
+Dia dhuit! Welcome to Lingua Franca
+(base) bradsteww@MacBook-Air-4 lingua-franca % pwd      
+/Users/bradsteww/Downloads/lingua-franca-project/lingua-franca
+(base) bradsteww@MacBook-Air-4 lingua-franca % md dead-languages
+(base) bradsteww@MacBook-Air-4 lingua-franca % ls        
+africa		dead-languages	northamerica	spanish.txt
+asia		europe		southamerica	todo
+(base) bradsteww@MacBook-Air-4 lingua-franca % ls dead-languages
+(base) bradsteww@MacBook-Air-4 lingua-franca % d
+Fri Jul  1 10:07:27 PDT 2022
+(base) bradsteww@MacBook-Air-4 lingua-franca % hy
+   35  sed -i 's/Lingua-Franca/Lingua Franca/g' */*.txt
+   36  grep -R1 "Lingua-Franca' */*.txt |wc -l
+   37  grep -R1 "Lingua-Franca' */*.txt | wc -l
+   38  sed -i.bak 's/Lingua-Franca/Lingua Franca/g' */*.txt
+   39  grep -R1 "Lingua-Franca' */*.txt | wc -l
+   40  grep -R1 'Lingua-Franca' */*.txt | wc -l
+   41  nano ~/.bash_profile
+   42  nano ~/.bash_profile
+   43  source ~/.bash_profile
+   44  nano ~/.bash_profile
+   45  source ~/.bash_profile
+   46  pwd
+   47  md dead-languages
+   48  ls
+   49  ls dead-languages
+   50  d
+(base) bradsteww@MacBook-Air-4 lingua-franca % nano ~/.bash_profile  
+(base) bradsteww@MacBook-Air-4 lingua-franca % source ~/.bash_profile
+Dia dhuit! Welcome to Lingua Franca
+(base) Lingua Franca nano ~/.bash_profile 
+(base) Lingua Franca source ~/.bash_profile
+Dia dhuit! Welcome to Lingua Franca
+(base) Lingua Franca md script
+(base) Lingua Franca ls
+africa		dead-languages	northamerica	southamerica	todo
+asia		europe		script		spanish.txt
+(base) Lingua Franca ls script
+(base) Lingua Franca d
+Fri Jul  1 10:10:11 PDT 2022
+(base) Lingua Franca hy
+   44  nano ~/.bash_profile
+   45  source ~/.bash_profile
+   46  pwd
+   47  md dead-languages
+   48  ls
+   49  ls dead-languages
+   50  d
+   51  hy
+   52  nano ~/.bash_profile
+   53  source ~/.bash_profile
+   54   nano ~/.bash_profile
+   55   source ~/.bash_profile
+   56  md script
+   57  ls
+   58  ls script
+   59  d
+(base) Lingua Franca md asia
+mkdir: asia: File exists
+(base) Lingua Franca md dead-languages
+mkdir: dead-languages: File exists
+(base) Lingua Franca ls dead_languages
+ls: dead_languages: No such file or directory
+(base) Lingua Franca ls dead-languages
+(base) Lingua Franca d
+Fri Jul  1 10:11:31 PDT 2022
+(base) Lingua Franca hy
+   50  d
+   51  hy
+   52  nano ~/.bash_profile
+   53  source ~/.bash_profile
+   54   nano ~/.bash_profile
+   55   source ~/.bash_profile
+   56  md script
+   57  ls
+   58  ls script
+   59  d
+   60  hy
+   61  md asia
+   62  md dead-languages
+   63  ls dead_languages
+   64  ls dead-languages
+   65  d
+(base) Lingua Franca env
+TMPDIR=/var/folders/hs/y001nx_151l9gx8vr19gt3240000gn/T/
+__CFBundleIdentifier=com.apple.Terminal
+XPC_FLAGS=0x0
+TERM=xterm-256color
+SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.YzVldiOkNk/Listeners
+XPC_SERVICE_NAME=0
+TERM_PROGRAM=Apple_Terminal
+TERM_PROGRAM_VERSION=443
+TERM_SESSION_ID=39CC86D2-70CD-442E-A546-8E8C3FCEBB13
+SHELL=/bin/zsh
+HOME=/Users/bradsteww
+LOGNAME=bradsteww
+USER=bradsteww
+PATH=/Library/Frameworks/Python.framework/Versions/3.10/bin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/opt/miniconda3/bin:/opt/miniconda3/condabin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+SHLVL=1
+PWD=/Users/bradsteww/Downloads/lingua-franca-project/lingua-franca
+OLDPWD=/Users/bradsteww/Downloads/lingua-franca-project/world
+CONDA_EXE=/opt/miniconda3/bin/conda
+_CE_M=
+_CE_CONDA=
+CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+CONDA_SHLVL=1
+CONDA_PREFIX=/opt/miniconda3
+CONDA_DEFAULT_ENV=base
+CONDA_PROMPT_MODIFIER=(base) 
+PS1=(base) Lingua Franca 
+LANG=en_US.UTF-8
+_=/usr/bin/env
+(base) Lingua Franca 
+(base) Lingua Franca command > output.txt
+zsh: redirection with no command
+(base) Lingua Franca 

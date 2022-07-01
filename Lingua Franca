@@ -1,7 +1,7 @@
 Last login: Thu Jun 30 02:47:14 on ttys000
 (base) bradsteww@MacBook-Air-4 ~ % pwd              
 /Users/bradsteww
-(base) bradsteww@MacBook-Air-4 ~ % cd bradsteww
+% cd bradsteww
 cd: no such file or directory: bradsteww
 (base) bradsteww@MacBook-Air-4 ~ % cd bradsteww/
 cd: no such file or directory: bradsteww/
